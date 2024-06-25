@@ -1,7 +1,7 @@
 {
-  "name": "my-react-app",
+  "name": "Makerspacewebsite",
   "version": "0.1.0",
-  "homepage": "https://Khushibhansali.github.io/MakerspaceInteractiveWebsite/src/index.js",
+  "homepage": "https://Khushibhansali.github.io/Makerspace-website/",
   "private": true,
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
