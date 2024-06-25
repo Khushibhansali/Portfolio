@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Makerspace-website/static/css/main.d980db22.css",
-    "main.js": "/Makerspace-website/static/js/main.98e3ff1e.js",
+    "main.js": "/Makerspace-website/static/js/main.21a76ecc.js",
     "static/js/208.e82defee.chunk.js": "/Makerspace-website/static/js/208.e82defee.chunk.js",
     "static/js/293.c0612caf.chunk.js": "/Makerspace-website/static/js/293.c0612caf.chunk.js",
     "static/js/917.291039d4.chunk.js": "/Makerspace-website/static/js/917.291039d4.chunk.js",
@@ -20,7 +20,7 @@
     "static/media/slick.woff": "/Makerspace-website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Makerspace-website/index.html",
     "main.d980db22.css.map": "/Makerspace-website/static/css/main.d980db22.css.map",
-    "main.98e3ff1e.js.map": "/Makerspace-website/static/js/main.98e3ff1e.js.map",
+    "main.21a76ecc.js.map": "/Makerspace-website/static/js/main.21a76ecc.js.map",
     "208.e82defee.chunk.js.map": "/Makerspace-website/static/js/208.e82defee.chunk.js.map",
     "293.c0612caf.chunk.js.map": "/Makerspace-website/static/js/293.c0612caf.chunk.js.map",
     "917.291039d4.chunk.js.map": "/Makerspace-website/static/js/917.291039d4.chunk.js.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.d980db22.css",
-    "static/js/main.98e3ff1e.js"
+    "static/js/main.21a76ecc.js"
   ]
 }
