@@ -1,7 +1,7 @@
 {
+  "homepage": "http://Khushibhansali.github.io/Makerrrr/",
   "name": "Makerspacewebsite",
   "version": "0.1.0",
-  "homepage": "https://Khushibhansali.github.io/Makerspace-website/",
   "private": true,
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
