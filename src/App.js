@@ -1,17 +1,12 @@
 import React from "react";
 import "./App.css";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
 import Events from "./pages/events";
 import Tutorials from "./pages/tutorials";
 import Coursework from "./pages/coursework";
-
 function App() {
     return (
         <Router>
