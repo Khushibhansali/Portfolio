@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/MakerspaceInteractiveWebsite/static/css/main.19e81fd3.css",
+    "main.js": "/MakerspaceInteractiveWebsite/static/js/main.b987a8c5.js",
+    "static/js/208.8f9b22d6.chunk.js": "/MakerspaceInteractiveWebsite/static/js/208.8f9b22d6.chunk.js",
+    "static/js/293.e2a65de1.chunk.js": "/MakerspaceInteractiveWebsite/static/js/293.e2a65de1.chunk.js",
+    "static/js/917.f67b66e4.chunk.js": "/MakerspaceInteractiveWebsite/static/js/917.f67b66e4.chunk.js",
+    "static/js/516.766a1060.chunk.js": "/MakerspaceInteractiveWebsite/static/js/516.766a1060.chunk.js",
+    "static/js/519.a14be268.chunk.js": "/MakerspaceInteractiveWebsite/static/js/519.a14be268.chunk.js",
+    "static/js/946.fc531471.chunk.js": "/MakerspaceInteractiveWebsite/static/js/946.fc531471.chunk.js",
+    "static/js/160.3c7b3072.chunk.js": "/MakerspaceInteractiveWebsite/static/js/160.3c7b3072.chunk.js",
+    "static/js/23.9105ded3.chunk.js": "/MakerspaceInteractiveWebsite/static/js/23.9105ded3.chunk.js",
+    "static/js/453.ad6eb26e.chunk.js": "/MakerspaceInteractiveWebsite/static/js/453.ad6eb26e.chunk.js",
+    "static/media/pncMillingMachine.jpeg": "/MakerspaceInteractiveWebsite/static/media/pncMillingMachine.4e69ec6d9803aa517bba.jpeg",
+    "static/media/sewingMachine.jpeg": "/MakerspaceInteractiveWebsite/static/media/sewingMachine.0b6164460222f4902678.jpeg",
+    "static/media/cornellLogo.png": "/MakerspaceInteractiveWebsite/static/media/cornellLogo.5c5f767aa87e10bdf59a.png",
+    "static/media/slick.svg": "/MakerspaceInteractiveWebsite/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/MakerspaceInteractiveWebsite/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/MakerspaceInteractiveWebsite/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/MakerspaceInteractiveWebsite/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/MakerspaceInteractiveWebsite/index.html",
+    "main.19e81fd3.css.map": "/MakerspaceInteractiveWebsite/static/css/main.19e81fd3.css.map",
+    "main.b987a8c5.js.map": "/MakerspaceInteractiveWebsite/static/js/main.b987a8c5.js.map",
+    "208.8f9b22d6.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/208.8f9b22d6.chunk.js.map",
+    "293.e2a65de1.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/293.e2a65de1.chunk.js.map",
+    "917.f67b66e4.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/917.f67b66e4.chunk.js.map",
+    "516.766a1060.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/516.766a1060.chunk.js.map",
+    "519.a14be268.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/519.a14be268.chunk.js.map",
+    "946.fc531471.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/946.fc531471.chunk.js.map",
+    "160.3c7b3072.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/160.3c7b3072.chunk.js.map",
+    "23.9105ded3.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/23.9105ded3.chunk.js.map",
+    "453.ad6eb26e.chunk.js.map": "/MakerspaceInteractiveWebsite/static/js/453.ad6eb26e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19e81fd3.css",
+    "static/js/main.b987a8c5.js"
+  ]
+}

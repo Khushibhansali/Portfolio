@@ -1,0 +1,57 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.tutorials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tutorials-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tutorials-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tutorials-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.tutorials-section a {
+    color: #007aff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tutorials-section a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .tutorials-section {
+        padding: 1rem;
+    }
+
+    .tutorials-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .tutorials-section p {
+        font-size: 0.875rem;
+    }
+}
