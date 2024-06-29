@@ -6,50 +6,41 @@ import {
   NavMenu,
   NavSubMenu,
   NavSubMenuItem,
-  NavSubMenuContainer,
-  ToggleButton
 } from './NavbarElements';
-import { FaBars, FaTimes, FaPlus, FaMinus } from 'react-icons/fa';
-import Logo from '../../cornellLogo.png' ;
+import { FaBars, FaTimes } from 'react-icons/fa';
+import Logo from '../../cornellLogo.png';
+import './fonts.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openSubMenus, setOpenSubMenus] = useState({});
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
-  };
-
-  const toggleSubMenu = (menu) => {
-    setOpenSubMenus({
-      ...openSubMenus,
-      [menu]: !openSubMenus[menu],
-    });
   };
 
   return (
     <>
       <NavIcon onClick={toggleNav}>
         {isOpen ? <FaTimes /> : <FaBars />}
-      </NavIcon> 
+      </NavIcon>
       <Nav isOpen={isOpen}>
-      <img src={Logo} alt="Cornell Logo" width="180px" height="50px" style={{marginLeft: "70px", marginTop: "10px"}} />
-
-        <NavMenu>
+        <img
+          src={Logo}
+          alt="Cornell Logo"
+          width="180px"
+          height="50px"
+          style={{ marginRight: 'auto' }}
+        />
+        <NavMenu isOpen={isOpen}>
           <NavLink to="/" onClick={toggleNav}>
             Home
           </NavLink>
           <NavLink to="/tutorials" onClick={toggleNav}>
             Machine Tutorials
           </NavLink>
-          <NavLink as="div" onClick={() => toggleSubMenu('get-involved')}>
-              Opportunities
-              <ToggleButton>
-                {openSubMenus['get-involved'] ? <FaMinus /> : <FaPlus />}
-              </ToggleButton>
-            </NavLink>
+          <NavLink as="div">
+            Opportunities
             <NavSubMenu>
-            <NavSubMenuContainer className={openSubMenus['get-involved'] ? 'open' : ''}>
               <NavSubMenuItem to="/coursework" onClick={toggleNav}>
                 Coursework
               </NavSubMenuItem>
@@ -63,46 +54,32 @@ const Navbar = () => {
                 Summer Interns
               </NavSubMenuItem>
               <NavSubMenuItem to="/artistProgram" onClick={toggleNav}>
-                /Art Microgrant
+                Art Microgrant
               </NavSubMenuItem>
-            </NavSubMenuContainer>
-          </NavSubMenu>
-    
-          <NavSubMenu>
-          </NavSubMenu>
-          <NavSubMenu>
-          <NavLink as="div" onClick={() => toggleSubMenu('projects')}>
-              Project Showcase
-              <ToggleButton>
-                {openSubMenus['projects'] ? <FaMinus /> : <FaPlus />}
-              </ToggleButton>
-            </NavLink>
-            <NavSubMenuContainer className={openSubMenus['projects'] ? 'open' : ''}>
+            </NavSubMenu>
+          </NavLink>
+          <NavLink as="div">
+            Project Showcase
+            <NavSubMenu>
               <NavSubMenuItem to="/projects/student" onClick={toggleNav}>
-                Previous Student Projects
+                Student Work
               </NavSubMenuItem>
               <NavSubMenuItem to="/projects/roosevelt" onClick={toggleNav}>
-                Previous Roosevelt Island Seniors Projects
+                Roosevelt Island Seniors Projects
               </NavSubMenuItem>
-            </NavSubMenuContainer>
-          </NavSubMenu>
-
-          <NavSubMenu>
-            <NavLink as="div" onClick={() => toggleSubMenu('about')}>
-              About
-              <ToggleButton>
-                {openSubMenus['about'] ? <FaMinus /> : <FaPlus />}
-              </ToggleButton>
-            </NavLink>
-            <NavSubMenuContainer className={openSubMenus['about'] ? 'open' : ''}>
+            </NavSubMenu>
+          </NavLink>
+          <NavLink as="div">
+            About
+            <NavSubMenu>
               <NavSubMenuItem to="/about" onClick={toggleNav}>
-                Meet the Team
+              Team
               </NavSubMenuItem>
               <NavSubMenuItem to="/about/future" onClick={toggleNav}>
-                Future Developments
+                Future Plans
               </NavSubMenuItem>
-            </NavSubMenuContainer>
-          </NavSubMenu>
+            </NavSubMenu>
+          </NavLink>
         </NavMenu>
       </Nav>
     </>

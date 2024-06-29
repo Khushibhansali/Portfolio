@@ -1,238 +1,148 @@
 /* Import a modern font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
   color: #333;
+  background: rgba(234, 227, 219, 0.8); /* Set the entire page background */
+  margin: 0;
+  padding: 0;
 }
 
 .app-container {
-  position: relative;
-}
-
-.about-container {
-  max-width: 1200px;
+  max-width: 98%; /* Make it full-width */
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+  line-height: 1.6;
+  position: relative; /* To enable positioning of child elements */
+  z-index: 0; /* Default layer */
+  background: white; /* Set the entire page background */
+
 }
 
-.main-title {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #2c3e50;
-}
-
-.about-section {
-  margin-bottom: 3rem;
-}
-
-.section-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.about-section h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #2c3e50;
-}
-
-.about-section p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.about-section ul {
-  list-style-type: none;
-  margin-left: 0;
-}
-
-.about-section li {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.about-section li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #2c3e50;
-}
-
-/* Add this to your CSS file or in the <style> tag */
-.project-slider {
-  margin-bottom: 3rem;
-  background-color: #8B0000; /* Deep red background */
-  padding: 2rem; /* Optional: Add some padding for better spacing */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  width: 100%;
-}
-
-/* Full Width Section */
-.full-width-section {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding-left: calc(50vw - 50%);
-  padding-right: calc(50vw - 50%);
-}
-
-.project-slider h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #FFFFFF; /* Change the heading color to white for better contrast */
+.info-slider .slide {
+  padding: 1px;
   text-align: center;
 }
 
-.slick-slide img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-.caption {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-  color: #FFFFFF; /* Change the caption color to white for better contrast */
-}
-
-.team-section {
-  margin-bottom: 3rem;
-}
-
-.team-section h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #2c3e50;
+.footer {
+  background: #333;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
-.team-members {
+.footer-content a {
+  color: #ddd;
+}
+
+.slide {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
-
-.team-member {
-  max-width: 400px;
-  margin: 1rem;
-  display: flex;
   align-items: center;
-  background-color: #f5f5f5;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 200px; /* Set the desired height */
 }
 
-.team-member img {
-  max-width: 150px;
-  height: auto;
-  margin-right: 1rem;
-  border-radius: 50%;
+.box {
+  width: 70%; /* Set the desired width */
+  text-align: center;
+  margin-left: 65%;
 }
 
-.team-info h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
+.arrow {
+  width: auto; /* Auto width for the arrow characters */
+  height: auto; /* Auto height for the arrow characters */
+  z-index: 2; /* Ensure arrows are on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute; /* Position them absolutely */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  font-size: 50px; /* Adjust the size as needed */
+  color: rgba(234, 227, 219, 0.8); /* Black color for the arrows */
+  background: black; /* No background */
+  border: none; /* No border */
+}
+.next {
+  right: 20px; /* Closer to the edge */
 }
 
-.team-info p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+.prev {
+  left: 20px; /* Closer to the edge */
 }
 
-.team-info a {
-  color: #3498db;
-  text-decoration: none;
+.slick-prev:before, .slick-next:before {
+  font-size: 50px;
+  color: black; /* Adjust the color as needed */
 }
 
-.team-info a:hover {
-  text-decoration: underline;
+.info-slider .slide .events-section {
+  background: none; /* Remove the background color */
+  text-align: center; /* Center the text */
+  margin: 0 auto;
 }
 
-.faq-item.open .answer {
-  display: block;
-}
-
-.faq-item.open .question {
-  font-weight: bold;
+.info-slider .slide .events-section p,
+.info-slider .slide .events-section ul {
+  display: inline-block;
+  text-align: left;
 }
 
 .faq-item {
-  margin-bottom: 1rem;
+  text-align: center; /* Center the FAQ items */
 }
 
-.faq-item h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
-  cursor: pointer;
-}
-
-.faq-item p {
-  font-size: 1.1rem;
-  color: #555;
-  display: none;
-}
-
-.faq-item.open p {
-  display: block;
-}
-
-
-/* Calendar Section */
-.calendar-section {
-  background-color: #f9f9f9; /* Light grey background for calendar section */
-  padding: 2rem;
-  margin-bottom: 3rem;
-}
-
-
-/* Footer Styles */
-.footer {
-  background-color: #8B0000; /* Deep red background */
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer a {
-  color: #ffffff; /* White color for links */
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.calendar-section,
-.faq-section {
+.main-slide {
+  height: 100vh; /* Full viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background-size: cover; /* Cover the entire slide */
+  background-position: center;
+  position: relative; /* To enable layering */
+  z-index: 1; /* Above app-container but below arrows */
+}
+
+.main-slide img {
+  width: auto; /* Full width for the main slide */
+  height: 100%;
+  margin-left: 10%;
+}
+
+.bgImg {
+  background-color: #59595c;
+}
+.parallax-container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+.layer-1,
+.layer-2,
+.layer-3 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.layer-1 {
+  top: 0;
+  z-index: 1;
+  transform: translateY(20%);
+}
+
+.layer-2 {
+  top: 50%;
+  z-index: 2;
+  transform: translateY(50%);
+}
+
+.layer-3 {
+  top: 75%;
+  z-index: 3;
+  transform: translateY(80%);
 }
