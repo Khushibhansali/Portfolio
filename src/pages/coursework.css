@@ -42,3 +42,25 @@
 .events-container a:hover {
     text-decoration: underline;
 }
+
+.interactive-guide {
+  margin-top: 50px;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.step-by-step {
+  margin-top: 50px;
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.step-buttons button {
+  margin: 10px;
+}

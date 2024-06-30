@@ -7,6 +7,8 @@ import About from "./pages/about";
 import Events from "./pages/events";
 import Tutorials from "./pages/tutorials";
 import Coursework from "./pages/coursework";
+import BambuPrinterGuide from "./pages/bambuTutorial";
+
 function App() {
     return (
         <Router>
@@ -17,6 +19,8 @@ function App() {
                 <Route path="/events" element={<Events />} />
                 <Route path="/coursework" element={<Coursework />} />
                 <Route path="/tutorials" element={<Tutorials />} />
+                <Route path="/bambuTutorial" element={<BambuPrinterGuide />} />
+
             </Routes>
         </Router>
     );

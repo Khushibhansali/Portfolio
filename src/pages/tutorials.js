@@ -1,7 +1,9 @@
 import React from "react";
 import "./tutorials.css";
 import "./about.css";
-
+import { Link } from 'react-router-dom';
+import BambuPrinterGuide from "./bambuPrinterGuide";
+import ImageCarousel from "./bambuTutorial";
 import LaserCutter from "../lasercutter.jpeg";
 import Prusa from "../prusaPrinter.jpeg";
 import MillingMachine from "../pncMillingMachine.jpeg"
@@ -23,7 +25,7 @@ const Tutorials = () => {
               <p>
                 The Bambu 3D printer is a versatile machine that can handle a variety of printing tasks. Here’s a demonstration on how to use it effectively.
               </p>
-              <a href="https://personalwebsite.com" target="_blank" rel="noopener noreferrer">Youtube Tutorial</a>
+              <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
           <div className="team-member">
@@ -96,7 +98,7 @@ const Tutorials = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
     );
 };
 
