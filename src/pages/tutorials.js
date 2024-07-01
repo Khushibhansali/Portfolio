@@ -35,7 +35,7 @@ const Tutorials = () => {
               <p>
                 The Ultimaker is a versatile machine that can handle a variety of printing tasks. Here’s a demonstration on how to use it effectively.
               </p>
-              <a href="https://personalwebsite.com" target="_blank" rel="noopener noreferrer">Youtube Tutorial</a>
+              <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
           <div className="team-member">
@@ -45,7 +45,7 @@ const Tutorials = () => {
               <p>
                Learn how to set up and operate the Prusa printer for your 3D printing projects.
               </p>
-              <a href="https://www.youtube.com/link_to_prusa_printer_tutorial" target="_blank" rel="noopener noreferrer">Youtube Tutorial</a>
+              <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
           <div className="team-member">
@@ -55,7 +55,7 @@ const Tutorials = () => {
               <p>
                Learn how to set up and operate the Prusa printer for your 3D printing projects.
               </p>
-              <a href="https://www.youtube.com/link_to_resin_printer_tutorial" target="_blank" rel="noopener noreferrer">Youtube Tutorial</a>
+              <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
           <div className="team-member">
@@ -64,7 +64,7 @@ const Tutorials = () => {
             <h2>Milling Machine</h2>
             <p>The milling machine is perfect for creating precise parts. This tutorial covers the basics of operating the machine.
             </p>
-            <a href="https://www.youtube.com/link_to_milling_machine_tutorial" target="_blank" rel="noopener noreferrer">Watch the tutorial on YouTube</a>
+            <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
           <div className="team-member">
@@ -74,7 +74,7 @@ const Tutorials = () => {
               <p>
               Learn how to use the laser cutter for precision cutting and engraving.
               </p>
-              <a href="https://www.youtube.com/link_to_resin_printer_tutorial" target="_blank" rel="noopener noreferrer">Youtube Tutorial</a>
+              <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
           <div className="team-member">
@@ -84,7 +84,7 @@ const Tutorials = () => {
               <p>
               Learn how to use the vinyl cutter for your custom designs.
               </p>
-              <a href="https://www.youtube.com/link_to_resin_printer_tutorial" target="_blank" rel="noopener noreferrer">Youtube Tutorial</a>
+              <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
           <div className="team-member">
@@ -94,7 +94,7 @@ const Tutorials = () => {
               <p>
               The sewing machine is great for fabric projects. This tutorial covers its basic functions.
               </p>
-              <a href="https://www.youtube.com/link_to_resin_printer_tutorial" target="_blank" rel="noopener noreferrer">Youtube Tutorial</a>
+              <Link to="/bambuTutorial">Try Tutorial</Link>
             </div>
           </div>
         </div>

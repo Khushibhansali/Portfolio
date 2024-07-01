@@ -21,7 +21,7 @@ export const NavLink = styled(Link)`
   font-family: 'Segoe UI', sans-serif;
   position: relative;
   &:hover {
-    color: #ff6f61; /* Coral color for hover effect */
+    color: #a42727; /* Coral color for hover effect */
   }
 `;
 
@@ -31,11 +31,12 @@ export const NavIcon = styled.div`
     display: block;
     position: absolute;
     top: 0;
-    left: 20px;
+    right: 20px; /* Align the NavIcon to the right side */
     transform: translate(0%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
+    z-index: 2; /* Ensure the NavIcon is above the Logo */
   }
 `;
 
@@ -45,6 +46,7 @@ export const NavMenu = styled.div`
   justify-content: center; /* Center the NavMenu items */
   width: 100%; /* Full width to allow centering */
   position: relative;
+
   @media screen and (max-width: 768px) {
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
     flex-direction: column;
@@ -54,6 +56,7 @@ export const NavMenu = styled.div`
     left: 0;
     background: rgba(0, 0, 0, 0.9); /* Black background */
     color: #fff;
+    justify-content: flex-start; /* Align the menu items to the left */
   }
 `;
 
@@ -63,6 +66,14 @@ export const Logo = styled(Link)`
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: auto; /* Ensure it is aligned properly */
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    left: 20px; /* Align the logo to the left side */
+    transform: translateY(-50%); /* Vertically center the logo */
+    z-index: 1; /* Ensure the logo is above the NavIcon */
+    font-size: 1.2rem; /* Reduce the logo font size */
+  }
 `;
 
 export const NavSubMenu = styled.div`
@@ -85,8 +96,8 @@ export const NavSubMenuItem = styled(Link)`
   display: block;
   white-space: pre-line; /* Prevents text from wrapping */
   &:hover {
-    background: #ff6f61; /* Coral color for hover effect */
-    color: #000;
+    background: #a42727; /* Coral color for hover effect */
+    color: #fff;
   }
 `;
 

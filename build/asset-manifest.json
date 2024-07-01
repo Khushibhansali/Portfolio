@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MakerspaceWebsite/static/css/main.416a229c.css",
-    "main.js": "/MakerspaceWebsite/static/js/main.063b6bc9.js",
+    "main.css": "/MakerspaceWebsite/static/css/main.ca127747.css",
+    "main.js": "/MakerspaceWebsite/static/js/main.b0e2f769.js",
     "static/js/208.bacbb612.chunk.js": "/MakerspaceWebsite/static/js/208.bacbb612.chunk.js",
     "static/js/293.baab8863.chunk.js": "/MakerspaceWebsite/static/js/293.baab8863.chunk.js",
     "static/js/917.b715968a.chunk.js": "/MakerspaceWebsite/static/js/917.b715968a.chunk.js",
@@ -22,8 +22,8 @@
     "static/media/Bambu_Lab_X1_Carbon v10_0.png": "/MakerspaceWebsite/static/media/Bambu_Lab_X1_Carbon v10_0.22ff2df9f578ace3aacf.png",
     "static/media/cornellLogo.png": "/MakerspaceWebsite/static/media/cornellLogo.5c5f767aa87e10bdf59a.png",
     "index.html": "/MakerspaceWebsite/index.html",
-    "main.416a229c.css.map": "/MakerspaceWebsite/static/css/main.416a229c.css.map",
-    "main.063b6bc9.js.map": "/MakerspaceWebsite/static/js/main.063b6bc9.js.map",
+    "main.ca127747.css.map": "/MakerspaceWebsite/static/css/main.ca127747.css.map",
+    "main.b0e2f769.js.map": "/MakerspaceWebsite/static/js/main.b0e2f769.js.map",
     "208.bacbb612.chunk.js.map": "/MakerspaceWebsite/static/js/208.bacbb612.chunk.js.map",
     "293.baab8863.chunk.js.map": "/MakerspaceWebsite/static/js/293.baab8863.chunk.js.map",
     "917.b715968a.chunk.js.map": "/MakerspaceWebsite/static/js/917.b715968a.chunk.js.map",
@@ -35,7 +35,7 @@
     "453.851264e5.chunk.js.map": "/MakerspaceWebsite/static/js/453.851264e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.416a229c.css",
-    "static/js/main.063b6bc9.js"
+    "static/css/main.ca127747.css",
+    "static/js/main.b0e2f769.js"
   ]
 }

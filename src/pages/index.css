@@ -63,11 +63,22 @@ body, html {
 .offer-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .offer-list li {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: 12%;
+}
+
+.offer-icon {
+  margin-right: 10px;
+  color: #a42727; /* Green color for the check mark */
 }
 
 .faq-item {

@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './index.css';
 import './coursework.css';
 import Spline from '@splinetool/react-spline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+
 const App = () => {
   const [isOpen, setIsOpen] = useState(null);
 
@@ -40,14 +43,26 @@ const App = () => {
       </section>
 
       <section className="section">
-        <h2 className="section-title">What We Offer</h2>
-        <ul className="offer-list">
-          <li>State-of-the-art equipment and tools for various projects.</li>
-          <li>Workshops and coursework to enhance skills.</li>
-          <li>Collaborative projects and networking opportunities with Weill Cornell, NYC Makerspaces, Roosevelt island local resident support, and outreach.</li>
-          <li>Support from experienced mentors and industry experts.</li>
-        </ul>
-      </section>
+  <h2 className="section-title">What We Offer</h2>
+  <ul className="offer-list">
+    <li>
+      <FontAwesomeIcon icon={faCheckCircle} className="offer-icon" />
+      State-of-the-art equipment and tools for various projects.
+    </li>
+    <li>
+      <FontAwesomeIcon icon={faCheckCircle} className="offer-icon" />
+      Workshops and coursework to enhance skills.
+    </li>
+    <li>
+      <FontAwesomeIcon icon={faCheckCircle} className="offer-icon" />
+      Collaborative opportunities with Weill Cornell, NYC Makerspaces, Roosevelt island local residents.
+    </li>
+    <li>
+      <FontAwesomeIcon icon={faCheckCircle} className="offer-icon" />
+      Support from experienced mentors and industry experts.
+    </li>
+  </ul>
+</section>
 
       <section className="section">
         <h2 className="section-title">Frequently Asked Questions</h2>
