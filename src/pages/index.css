@@ -98,3 +98,34 @@ body, html {
   text-align: center;
   flex-shrink: 0;
 }
+/* General styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #000;
+}
+
+.header-logo {
+  width: 150px; /* Adjust width as needed */
+}
+
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    order: 2;
+    margin-left: auto;
+  }
+}
