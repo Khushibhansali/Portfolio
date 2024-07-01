@@ -20,10 +20,7 @@ const Navbar = () => {
 
   return (
     <>
-      <NavIcon onClick={toggleNav}>
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </NavIcon>
-      <Nav isOpen={isOpen}>
+      <Nav>
         <img
           src={Logo}
           alt="Cornell Logo"
@@ -31,6 +28,9 @@ const Navbar = () => {
           height="50px"
           style={{ marginRight: 'auto' }}
         />
+        <NavIcon onClick={toggleNav}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </NavIcon>
         <NavMenu isOpen={isOpen}>
           <NavLink to="/" onClick={toggleNav}>
             Home
@@ -61,8 +61,8 @@ const Navbar = () => {
           <NavLink as="div">
             Project Showcase
             <NavSubMenu>
-              <NavSubMenuItem to="/projects/student" onClick={toggleNav}>
-                Student Work
+              <NavSubMenuItem to="/studentProjects" onClick={toggleNav}>
+               Student Projects
               </NavSubMenuItem>
               <NavSubMenuItem to="/projects/roosevelt" onClick={toggleNav}>
                 Roosevelt Island Seniors Projects
@@ -73,7 +73,7 @@ const Navbar = () => {
             About
             <NavSubMenu>
               <NavSubMenuItem to="/about" onClick={toggleNav}>
-              Team
+                Team
               </NavSubMenuItem>
               <NavSubMenuItem to="/about/future" onClick={toggleNav}>
                 Future Plans

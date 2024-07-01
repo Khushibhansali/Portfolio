@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Container, Typography, Button, Box, Grid, Card, CardMedia, CardContent, Paper } from '@mui/material';
-import "./coursework.css";
+import { Container, Typography, Button, Box, Grid, CardMedia, Paper } from '@mui/material';
 import frontMachine from "../bambuPics/Bambu_Lab_X1_Carbon v10_0.png";
 import backMachine from "../bambuPics/Bambu_Lab_X1_Carbon v10_1.png";
 import sideMachine from "../bambuPics/Bambu_Lab_X1_Carbon v10.png";
 import display from "../bambuPics/display_screen.png";
+import thingyverse from "../bambuPics/thingyverse.png";
+import bstudio from "../bambuPics/bstudio.png";
 
 const steps = [
   { 
@@ -35,10 +36,30 @@ const steps = [
     details: "Stay nearby during the initial layers to make sure the print adheres to the bed. If the print fails to stick, you may need to clean the bed or adjust the bed temperature. Use the pause and resume functions if necessary.",
     image: display 
   },
+  { 
+    step: 5, 
+    title: "Download STL Files", 
+    description: "Find and download STL files from online repositories such as Thingiverse, MyMiniFactory, or Cults3D.",
+    details: "Ensure the STL files are compatible with your printer's specifications. Verify the dimensions and check for any errors in the model using a 3D modeling software.",
+    image: thingyverse 
+  },
+  { 
+    step: 6, 
+    title: "Use Bambu Studio Software & Convert to Gcode", 
+    description: "Import the STL file into the Bambu Studio software and configure the print settings.",
+    details: "Choose the right printer model, select the X1 Carbon 0.4 nozzle, textured PEI plate, and adjust the support settings. Select tree support if your model requires complex supports. Tree support provides optimal support with minimal material usage. Choose the right type of PLA filament for your print job. Consider color, quality, and brand. Once satisfied, click the slice button to convert the STL file to G-code necessary for printing.",
+    image: bstudio 
+  },
+  { 
+    step: 7, 
+    title: "Send the Gcode with USB or Over Wi-Fi", 
+    description: "Transfer the G-code file to the printer via USB drive or Wi-Fi.",
+    details: "Ensure the file is correctly loaded on the printer and start the print job from the printer's menu.",
+    image: display 
+  },
 ];
 
 const ImageCarousel = () => {
-  const [activeImage, setActiveImage] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
 
   return (
@@ -60,9 +81,16 @@ const ImageCarousel = () => {
           ))}
         </Grid>
       </Box>
-      <Box sx={{ height: 500, display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
         <Box>
-          <CardMedia component="img" image={steps[activeStep].image} alt={steps[activeStep].title} className="main-image" />
+          <CardMedia 
+            component="img" 
+            image={steps[activeStep].image} 
+            alt={steps[activeStep].title} 
+            className="main-image" 
+            sx={{ width: '100%', height: '400px', objectFit: 'contain', marginBottom: '20px' }} 
+          />
+          <Typography variant="subtitle1" mt={2}>{steps[activeStep].title}</Typography>
         </Box>
       </Box>
       <Box mt={8} className="step-by-step">
@@ -72,7 +100,18 @@ const ImageCarousel = () => {
           <Typography variant="body1" mt={2}>{steps[activeStep].details}</Typography>
         </Paper>
       </Box>
+      <br/><br/><br/><br/><br/><br/>
+      <footer className="footer">
+        <Box sx={{ py: 4, textAlign: 'center', backgroundColor: '#59595c', width: '100%', position: 'fixed', bottom: 0, left: 0 }}>
+          <Typography variant="body2">&copy; 2024 Cornell Tech Makerspace. All rights reserved.</Typography>
+          <Typography variant="body2">
+            Contact us: <a href="mailto:info@cornelltechmakerspace.com" style={{ color: 'white' }} >info@cornelltechmakerspace.com</a>
+          </Typography>
+        </Box>
+      </footer>
+
     </Container>
+
   );
 };
 

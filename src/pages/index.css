@@ -1,148 +1,100 @@
-/* Import a modern font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  background: rgba(234, 227, 219, 0.8); /* Set the entire page background */
+body, html {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-container {
-  max-width: 98%; /* Make it full-width */
-  margin: 0 auto;
-  padding: 0;
-  line-height: 1.6;
-  position: relative; /* To enable positioning of child elements */
-  z-index: 0; /* Default layer */
-  background: white; /* Set the entire page background */
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.info-slider .slide {
-  padding: 1px;
-  text-align: center;
-}
-
-.footer {
-  background: #333;
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-content a {
-  color: #ddd;
-}
-
-.slide {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Set the desired height */
-}
-
-.box {
-  width: 70%; /* Set the desired width */
   text-align: center;
-  margin-left: 65%;
+  flex-shrink: 0;
 }
 
-.arrow {
-  width: auto; /* Auto width for the arrow characters */
-  height: auto; /* Auto height for the arrow characters */
-  z-index: 2; /* Ensure arrows are on top */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: absolute; /* Position them absolutely */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%);
-  font-size: 50px; /* Adjust the size as needed */
-  color: rgba(234, 227, 219, 0.8); /* Black color for the arrows */
-  background: black; /* No background */
-  border: none; /* No border */
-}
-.next {
-  right: 20px; /* Closer to the edge */
+.hero-title {
+  font-size: 4rem;
+  margin: 0;
 }
 
-.prev {
-  left: 20px; /* Closer to the edge */
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
-.slick-prev:before, .slick-next:before {
-  font-size: 50px;
-  color: black; /* Adjust the color as needed */
+.section {
+  width: 80%;
+  max-width: 1200px;
+  padding: 40px 0;
+  text-align: center;
+  flex-grow: 1;
 }
 
-.info-slider .slide .events-section {
-  background: none; /* Remove the background color */
-  text-align: center; /* Center the text */
-  margin: 0 auto;
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.info-slider .slide .events-section p,
-.info-slider .slide .events-section ul {
-  display: inline-block;
-  text-align: left;
+.section-content {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.offer-list li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .faq-item {
-  text-align: center; /* Center the FAQ items */
+  margin-bottom: 20px;
 }
 
-.main-slide {
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover; /* Cover the entire slide */
-  background-position: center;
-  position: relative; /* To enable layering */
-  z-index: 1; /* Above app-container but below arrows */
+.faq-question {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
-.main-slide img {
-  width: auto; /* Full width for the main slide */
-  height: 100%;
-  margin-left: 10%;
+.faq-question:hover {
+  color: #007bff;
 }
 
-.bgImg {
-  background-color: #59595c;
-}
-.parallax-container {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 1px;
+.faq-answer {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: left;
 }
 
-.layer-1,
-.layer-2,
-.layer-3 {
-  position: absolute;
-  left: 0;
+.footer {
   width: 100%;
-}
-
-.layer-1 {
-  top: 0;
-  z-index: 1;
-  transform: translateY(20%);
-}
-
-.layer-2 {
-  top: 50%;
-  z-index: 2;
-  transform: translateY(50%);
-}
-
-.layer-3 {
-  top: 75%;
-  z-index: 3;
-  transform: translateY(80%);
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
 }

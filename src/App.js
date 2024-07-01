@@ -8,6 +8,7 @@ import Events from "./pages/events";
 import Tutorials from "./pages/tutorials";
 import Coursework from "./pages/coursework";
 import BambuPrinterGuide from "./pages/bambuTutorial";
+import StudentProjects from "./pages/studentProjects";
 
 function App() {
     return (
@@ -20,7 +21,7 @@ function App() {
                 <Route path="/coursework" element={<Coursework />} />
                 <Route path="/tutorials" element={<Tutorials />} />
                 <Route path="/bambuTutorial" element={<BambuPrinterGuide />} />
-
+                <Route path="/studentProjects" element = {<StudentProjects />} />
             </Routes>
         </Router>
     );
