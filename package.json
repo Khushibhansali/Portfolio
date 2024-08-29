@@ -1,6 +1,6 @@
 {
-  "homepage": "http://Khushibhansali.github.io/MakerspaceWebsite/",
-  "name": "MakerspaceWebsite",
+  "homepage": "http://Khushibhansali.github.io/Khushibhansali/",
+  "name": "Khushibhansali",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aframe": "^1.6.0",
     "bootstrap": "^5.3.3",
+    "framer-motion": "^11.3.31",
     "react": "^18.3.1",
     "react-aframe": "^1.0.0",
     "react-awesome-reveal": "^4.2.12",

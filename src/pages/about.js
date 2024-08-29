@@ -1,35 +1,29 @@
 import React from "react";
 import "./about.css";
+import me9 from "../Images/me9.JPG";
 
 const About = () => {
-    return (
-        <section className="team-section">
-        <h2>Our Team</h2>
-        <div className="team-members">
-          <div className="team-member">
-            <img src="path_to_niti_parikh_photo.jpg" alt="Professor Niti Parikh" />
-            <div className="team-info">
-              <h3>Professor Niti Parikh</h3>
-              <p>
-                Professor Niti Parikh has built everything from scratch, creating the makerspace and designing the new makerspace lab set to open in 2025. She is super passionate about creating things and has been the driving force behind our makerspace's success.
-              </p>
-              <a href="https://personalwebsite.com" target="_blank" rel="noopener noreferrer">Personal Website</a>
-            </div>
-          </div>
-          <div className="team-member">
-            <img src="path_to_sebastian_photo.jpg" alt="Sebastian" />
-            <div className="team-info">
-              <h3>Sebastian</h3>
-              <p>
-                Sebastian is an in-house artist who is actively involved in making things in the makerspace. His enthusiasm and creativity inspire other students to explore their potential and bring their ideas to life.
-              </p>
-              <a href="https://instagram.com/sebastian" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </div>
-          </div>
+  return (
+    <section className="about-section">
+      <div className="about-content">
+        <div className="about-text">
+          <h1>Hello, I'm Khushi</h1>
+          <h2>A SOFTWARE/ML ENGINEER BY TRADE, A CREATIVE TECHNOLOGIST BY PASSION </h2>
+          <p>
+          With a graduate degree in computer science from Cornell University and the University of Maryland, College Park, specializing in Machine Learning Engineering, Deep Generative Modeling, Natural Language Processing, and Interactive Device Design, my goal is to harness the creative power of art to push the boundaries of technology. My hands-on experience at the US FDA, Goldman Sachs, and Johns Hopkins Applied Physics Laboratory has deepened my understanding of both technical and creative domains, reinforcing my belief that the fusion of art and technology can drive advancements that improve society, foster deeper community connections, and inspire unparalleled collaborations.
+
+          I’m passionate about integrating emerging technologies like machine learning, wearables, and AR/VR to create experiences that are as impactful as they are innovative. I strive to design solutions that not only meet functional needs but also resonate on a human level, bringing people together through shared creative visions.
+
+          Let’s build a future where technology is not just a tool, but a catalyst for artistic expression, societal progress, and meaningful connections.
+          </p>
+          <p className="cta">Let's build with intention together!</p>
         </div>
-      </section>
-      
-    );
+        <div className="about-image">
+          <img src={me9} alt="Khushi Bhansali" />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

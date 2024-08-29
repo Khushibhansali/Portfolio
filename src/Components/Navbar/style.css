@@ -1,13 +1,31 @@
 .dropdown-menu {
-    background-color: #333;
+    background-color: white;
   }
   
-  .dropdown-item {
+.dropdown-item {
     color: #fff;
-  }
+}
   
   .dropdown-item:hover {
     background-color: #555;
   }
   
+  a{
+   color: #000;
+  text-decoration: none;
+  padding: 0 2rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  position: relative;
+  margin-right: 50px;
+  &:hover {
+    color: #a42727; /* Coral color for hover effect */
+  }
+  @media screen and (max-width: 768px) {
+    margin-right:0px;
+  }
+  }
   

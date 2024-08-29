@@ -5,11 +5,11 @@ import {
   NavIcon,
   NavMenu,
   NavSubMenu,
-  NavSubMenuItem,
+  NavSubMenuItem
 } from './NavbarElements';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import Logo from '../../cornellLogo.png';
 import './fonts.css';
+import './style.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,70 +18,43 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const ColoredLine = ({ color }) => (
+    <hr
+        style={{
+            color: color,
+            height: 0.5
+        }}
+    />
+  );
+
   return (
     <>
       <Nav>
-        <img
-          src={Logo}
-          alt="Cornell Logo"
-          width="180px"
-          height="50px"
-          style={{ marginRight: 'auto' }}
-        />
+        <br/><br/><br/><br/>
+        <h1 className="kalnia-glaze"> Khushi Bhansali</h1>
         <NavIcon onClick={toggleNav}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </NavIcon>
         <NavMenu isOpen={isOpen}>
-          <NavLink to="/" onClick={toggleNav}>
-            Home
-          </NavLink>
-          <NavLink to="/tutorials" onClick={toggleNav}>
-            Machine Tutorials
-          </NavLink>
-          <NavLink as="div">
-            Opportunities
+          <NavLink to="/" > Home </NavLink>
+          <NavLink to="/projects" > Work 
             <NavSubMenu>
-              <NavSubMenuItem to="/coursework" onClick={toggleNav}>
-                Coursework
+              <NavSubMenuItem to="/projects" onClick={toggleNav}>
+               Projects
               </NavSubMenuItem>
-              <NavSubMenuItem to="/events" onClick={toggleNav}>
-                Events Calendar
-              </NavSubMenuItem>
-              <NavSubMenuItem to="/outreach" onClick={toggleNav}>
-                K-5 Outreach
-              </NavSubMenuItem>
-              <NavSubMenuItem to="/interns" onClick={toggleNav}>
-                Summer Interns
-              </NavSubMenuItem>
-              <NavSubMenuItem to="/artistProgram" onClick={toggleNav}>
-                Art Microgrant
+              <NavSubMenuItem to="/art" onClick={toggleNav}>
+                Art
               </NavSubMenuItem>
             </NavSubMenu>
           </NavLink>
-          <NavLink as="div">
-            Project Showcase
-            <NavSubMenu>
-              <NavSubMenuItem to="/studentProjects" onClick={toggleNav}>
-               Student Projects
-              </NavSubMenuItem>
-              <NavSubMenuItem to="/projects/roosevelt" onClick={toggleNav}>
-                Roosevelt Island Seniors Projects
-              </NavSubMenuItem>
-            </NavSubMenu>
-          </NavLink>
-          <NavLink as="div">
-            About
-            <NavSubMenu>
-              <NavSubMenuItem to="/about" onClick={toggleNav}>
-                Team
-              </NavSubMenuItem>
-              <NavSubMenuItem to="/about/future" onClick={toggleNav}>
-                Future Plans
-              </NavSubMenuItem>
-            </NavSubMenu>
-          </NavLink>
+
+          <NavLink to="/About" > About </NavLink>
+          <a href="https://drive.google.com/file/d/111BJSZvob2cqN00C7E_PUchjKKvDi74K/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+          
         </NavMenu>
       </Nav>
+      <ColoredLine color="#808080" />
+
     </>
   );
 };

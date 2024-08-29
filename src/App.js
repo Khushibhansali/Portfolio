@@ -4,11 +4,9 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./pages";
 import About from "./pages/about";
-import Events from "./pages/events";
-import Tutorials from "./pages/tutorials";
-import Coursework from "./pages/coursework";
-import BambuPrinterGuide from "./pages/bambuTutorial";
-import StudentProjects from "./pages/studentProjects";
+// import Resume from "./pages/resume";
+import Art from "./pages/art.js";
+import Projects from "./pages/projects.js";
 
 function App() {
     return (
@@ -16,12 +14,9 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/art" element={<Art />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/events" element={<Events />} />
-                <Route path="/coursework" element={<Coursework />} />
-                <Route path="/tutorials" element={<Tutorials />} />
-                <Route path="/bambuTutorial" element={<BambuPrinterGuide />} />
-                <Route path="/studentProjects" element = {<StudentProjects />} />
+                <Route path="/projects" element={<Projects />} />
             </Routes>
         </Router>
     );

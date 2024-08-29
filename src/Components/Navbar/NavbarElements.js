@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+
 export const Nav = styled.nav`
-  background: rgba(0, 0, 0, 0.9); /* Black background */
+  background: #fff; /* Black background */
   height: 60px;
   display: flex;
   justify-content: center;
@@ -11,17 +12,25 @@ export const Nav = styled.nav`
   position: relative;
   z-index: 1000; /* Ensure the navbar is above other content */
   padding: 0 20px;
+  margin-top:10px;
 `;
 
 export const NavLink = styled(Link)`
-  color: #fff;
+  color: #000;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 2rem;
   cursor: pointer;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
   position: relative;
+  margin-right: 50px;
   &:hover {
     color: #a42727; /* Coral color for hover effect */
+  }
+  @media screen and (max-width: 768px) {
+    margin-right:0px;
   }
 `;
 
@@ -54,25 +63,9 @@ export const NavMenu = styled.div`
     position: absolute;
     top: 60px;
     left: 0;
-    background: rgba(0, 0, 0, 0.9); /* Black background */
-    color: #fff;
+    background: #fff; /* Fixed color code */
+    color: #000; /* Ensure text color contrasts well */
     justify-content: flex-start; /* Align the menu items to the left */
-  }
-`;
-
-export const Logo = styled(Link)`
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: auto; /* Ensure it is aligned properly */
-
-  @media screen and (max-width: 768px) {
-    position: absolute;
-    left: 20px; /* Align the logo to the left side */
-    transform: translateY(-50%); /* Vertically center the logo */
-    z-index: 1; /* Ensure the logo is above the NavIcon */
-    font-size: 1.2rem; /* Reduce the logo font size */
   }
 `;
 
@@ -81,7 +74,6 @@ export const NavSubMenu = styled.div`
   position: absolute;
   top: 100%; /* Align submenu directly below the NavLink */
   left: 0;
-  background: rgba(0, 0, 0, 0.9); /* Black background */
   z-index: 1;
   ${NavLink}:hover & {
     display: block;
@@ -89,14 +81,15 @@ export const NavSubMenu = styled.div`
 `;
 
 export const NavSubMenuItem = styled(Link)`
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  padding: 0.5rem 1rem;
+  color: #000;
+  background: #fff; /* White background for submenu items */
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 1rem; /* Add horizontal padding to avoid overlap */
   text-decoration: none;
   display: block;
-  white-space: pre-line; /* Prevents text from wrapping */
+  white-space: nowrap; /* Prevents text from wrapping */
   &:hover {
-    background: #a42727; /* Coral color for hover effect */
+    background: #080808; /* Dark background on hover */
     color: #fff;
   }
 `;
