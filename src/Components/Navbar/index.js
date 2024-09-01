@@ -37,7 +37,7 @@ const Navbar = () => {
         </NavIcon>
         <NavMenu isOpen={isOpen}>
           <NavLink to="/" > Home </NavLink>
-          <NavLink to="/projects" > Work 
+          <NavLink to="/projects" > Portfolio 
             <NavSubMenu>
               <NavSubMenuItem to="/projects" onClick={toggleNav}>
                Projects

@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./pages";
 import About from "./pages/about";
 // import Resume from "./pages/resume";
-import Art from "./pages/art.js";
+import Art from "./pages/art";
 import Projects from "./pages/projects.js";
 
 function App() {

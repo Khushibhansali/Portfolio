@@ -94,6 +94,13 @@ export const NavSubMenuItem = styled(Link)`
   }
 `;
 
+export const NavText = styled.div`
+  display: none;
+  color: #000;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`;
 export const ToggleButton = styled.div`
   display: inline-block;
   margin-left: 0.5rem;

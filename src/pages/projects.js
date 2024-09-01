@@ -1,21 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
-import {
-  ProjectTitle,
-  ProjectSubtitle,
-  Image,
-  DetailsWrapper,
-  Section,
-  PaletteWrapper,
-  Palette,
-  Circle,
-  CircleImage,
-  Video,
-  Text,
-  Link
-} from './projectStyles';
 
 import scream from "../Images/scream.png";
 import game from "../Images/game.png";
@@ -31,26 +16,138 @@ import wire2 from "../Images/wire2.png";
 import fda from "../Images/fda.png";
 import trash from "../Images/trash.png";
 
+const Section = styled.section`
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+`;
+
+const PaletteWrapper = styled.div`
+  width: 20%;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+`;
+
+const Palette = styled.div`
+`;
+
+const Circle = styled(motion.div)`
+  border-radius: 50%;
+  border: 5px solid #f0f0f0;
+  overflow: hidden;
+  margin: 10px 50px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+`;
+
+const CircleImage = styled.img`
+  width: 200px;
+  height: 200px;
+  display: block;
+`;
+
+const DetailsWrapper = styled.div`
+  width: 80%;
+  position: relative;
+  padding-left: 10px;
+  overflow-y: auto;
+`;
+
+const ProjectTitle = styled.h2`
+  font-size: 2em;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+`;
+
+const ProjectSubtitle = styled.h3`
+  font-size: 1.5em;
+  color: #ccc;
+  position: relative;
+  z-index: 2;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+`;
+
+const Video = styled.video`
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+`;
+
+const Text = styled.p`
+  font-size: 1em;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+`;
+
+const Link = styled.a`
+  font-size: 1em;
+  color: #fff;
+  text-decoration: underline;
+  position: relative;
+  z-index: 2;
+`;
+
+const ParallaxBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(${(props) => props.src});
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+`;
+
+const ParallaxSection = styled.div`
+  position: relative;
+  padding: 100px 0;
+`;
+
+const SlidingCover = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  transition: transform 1s ease-in-out;
+  transform: translateX(${(props) => (props.active ? '0%' : '-100%')});
+  z-index: 1;
+`;
 
 const work = [
   {
     title: "The Scream That Actually Screams",
     subtitle: "A Musical Painting made with IOT sensors",
-    mediaType: ["image", "video"],
-    mediaSrc: [scream, screamVideo, how],
+    mediaType: "video",
+    mediaSrc: [screamVideo, how],
     description: "An interactive art installation that brings Edvard Munch's 'The Scream' to life through sound and technology.",
   },
   {
     title: "AI Designed Gown",
     mediaType: "image",
-    mediaSrc: [mood, ai, mood],
+    mediaSrc: [mood, ai],
     description: "A dress designed with generative AI, transforming a curated moodboard into a stunning, wearable piece of art.",
   },
   {
     title: "AromaSense", 
     subtitle:"Top 10 US Finalist for L'Oréal Brandstorm 2023",
     mediaType: "image",
-    mediaSrc: [loreal3, loreal1, loreal2],
+    mediaSrc: [loreal1, loreal2],
     description: " At the core of L'Oréal's beauty tech strategy lies a commitment to personalization and inclusivity. Through their Beauty Tech division, they push the boundaries of innovation in the beauty industry, creating highly personalized and inclusive solutions. We are dedicated to addressing individual consumer needs to enable seamless online-offline experiences and utilizing AI for enhanced personalization. Collaborative efforts with startups further underscore their commitment to developing innovative beauty products and services.   Our product capitalizes on the burgeoning sector of L'Oréal perfumes by introducing them to people's homes through VR headsets. This innovative solution enables users to blend L'Oréal scents by scanning their mood, facial expressions, and voice, immersing them in an aromatherapy zen space to fully appreciate their custom scent creation. Upon completion, users can personalize the 3D design of the bottle and conveniently purchase it from the L'Oréal store. This initiative not only expands L'Oréal's presence into the VR realm but also taps into an underdeveloped market, enhancing accessibility and engagement with our brand.",
   }, 
   { 
@@ -100,7 +197,10 @@ const Projects = () => {
               whileTap={{ scale: 0.9 }}
               onClick={() => setActiveProject(project)}
             >
-              <CircleImage src={project.mediaType === "image" ? project.mediaSrc[0] : null} alt={project.title} />
+              <CircleImage
+                src={project.mediaType === "image" ? project.mediaSrc[0] : null}
+                alt={project.title}
+              />
             </Circle>
           ))}
         </Palette>
@@ -109,23 +209,27 @@ const Projects = () => {
       <DetailsWrapper>
         {activeProject ? (
           <>
-            <ProjectTitle>{activeProject.title}</ProjectTitle>
-            {activeProject.subtitle && <ProjectSubtitle>{activeProject.subtitle}</ProjectSubtitle>}
-            {activeProject.mediaType === "video" ? (
-              activeProject.mediaSrc.map((src, i) => (
-                <Video key={i} controls>
-                  <source src={src} type="video/mp4"/>
-                  Your browser does not support the video tag.
-                </Video>
-              ))
-            ) : (
-              activeProject.mediaSrc.map((src, i) => (
-                <Image key={i} src={src} alt={activeProject.title}/>
-              ))
-            )}
-            <Text>{activeProject.description}</Text>
+            <ParallaxBackground src={activeProject.mediaType === "image" ? activeProject.mediaSrc[0] : activeProject.mediaSrc[1]} />
+            <SlidingCover active={true} />
+            <ParallaxSection>
+              <ProjectTitle>{activeProject.title}</ProjectTitle>
+              {activeProject.subtitle && <ProjectSubtitle>{activeProject.subtitle}</ProjectSubtitle>}
+              {activeProject.mediaType === "video" ? (
+                activeProject.mediaSrc.map((src, i) => (
+                  <Video key={i} controls>
+                    <source src={src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </Video>
+                ))
+              ) : (
+                activeProject.mediaSrc.map((src, i) => (
+                  <Image key={i} src={src} alt={activeProject.title} />
+                ))
+              )}
+              <Text>{activeProject.description}</Text>
 
-            <Link>View Project here: {activeProject.link}</Link>
+              <Link href={activeProject.link} target="_blank">View Project here: {activeProject.link}</Link>
+            </ParallaxSection>
           </>
         ) : (
           <Text>Please select a project from the palette to view details.</Text>
